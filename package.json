@@ -1,0 +1,8 @@
+{
+  "name": "AllPet",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/viniciusperrone/AllPet.git",
+  "author": "Vinicius Perrone <perronevinicius2018@gmail.com>",
+  "license": "MIT"
+}
