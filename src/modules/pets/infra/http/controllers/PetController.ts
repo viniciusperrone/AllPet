@@ -1,8 +1,16 @@
 import { CreatePetService } from '@modules/pets/services/CreatePetService';
+import { ListPetService } from '@modules/pets/services/ListPetService';
 import { Request, Response } from 'express';
 import { container } from 'tsyringe';
 
 class PetController {
+  public async index(request: Request, response: Response) {
+    const listPets = container.resolve(ListPetService);
+
+    const pets = await listPets.execute();
+
+    return response.json(pets);
+  }
   public async create(request: Request, response: Response) {
     const { name, cellphone, description } = request.body;
     const user_id = request.user.uuid;

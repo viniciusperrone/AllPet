@@ -1,6 +1,7 @@
 import 'reflect-metadata';
 import 'express-async-errors';
 import '@shared/container';
+import uploadConfig from '@config/upload';
 import express, { NextFunction, Request, Response } from 'express';
 import cors from 'cors';
 import router from '../routes';
@@ -15,6 +16,7 @@ dataSource.initialize().then(() => {
   app.use(cors());
   app.use(express.json());
   app.use(router);
+  app.use('/files', express.static(uploadConfig.directory));
 
   app.use(errors());
   app.use(

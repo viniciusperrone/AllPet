@@ -23,6 +23,8 @@ class CreatePetService {
       description,
     });
 
+    console.log(user_id);
+
     return user;
   }
 }

@@ -1,13 +1,14 @@
 .idea/
+.docker/dbdata
 .vscode/
 node_modules/
 build/
 temp/
 .env
 coverage
-dist
+ormconfig.json
 commands.txt
-*.rdb
+dist
 
-tmp/*
-!tmp/.gitkeep
+uploads/*
+!uploads/.gitkeep

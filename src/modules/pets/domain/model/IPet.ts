@@ -4,6 +4,7 @@ export interface IPet {
   name: string;
   cellphone: string;
   description: string;
+  avatar: string;
   created_at: Date;
   updated_at: Date;
 }

@@ -11,6 +11,9 @@ class Pet {
   @PrimaryColumn('uuid')
   uuid: string;
 
+  @Column('uuid')
+  user_id: string;
+
   @Column()
   name: string;
 
