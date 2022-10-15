@@ -11,11 +11,13 @@ class CreatePetService {
   ) {}
 
   public async execute({
+    user_id,
     name,
     cellphone,
     description,
   }: ICreatePet): Promise<IPet> {
     const user = await this.petsRepository.create({
+      user_id,
       name,
       cellphone,
       description,

@@ -14,6 +14,10 @@ export class CreatePets1665848037219 implements MigrationInterface {
             default: 'uuid_generate_v4()',
           },
           {
+            name: 'user_id',
+            type: 'uuid',
+          },
+          {
             name: 'name',
             type: 'varchar',
           },
