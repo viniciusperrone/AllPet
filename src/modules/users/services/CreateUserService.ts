@@ -11,7 +11,12 @@ class CreateUserService {
     private usersRepository: IUsersRepository,
   ) {}
 
-  public async execute({ name, email, password }: ICreateUser): Promise<IUser> {
+  public async execute({
+    name,
+    email,
+    cellphone,
+    password,
+  }: ICreateUser): Promise<IUser> {
     const emailExist = await this.usersRepository.findByEmail(email);
 
     if (emailExist) {
@@ -21,9 +26,12 @@ class CreateUserService {
     const user = await this.usersRepository.create({
       name,
       email,
+      cellphone,
       password,
     });
 
     return user;
   }
 }
+
+export { CreateUserService };

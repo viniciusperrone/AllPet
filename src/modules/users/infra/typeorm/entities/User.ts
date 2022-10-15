@@ -18,6 +18,9 @@ class User {
   email: string;
 
   @Column()
+  cellphone: string;
+
+  @Column()
   password: string;
 
   @CreateDateColumn()
