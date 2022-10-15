@@ -16,12 +16,11 @@ export class CreateUserTokens1665844946136 implements MigrationInterface {
           {
             name: 'token',
             type: 'uuid',
-            isPrimary: true,
             generationStrategy: 'uuid',
             default: 'uuid_generate_v4()',
           },
           {
-            name: 'uuid',
+            name: 'user_id',
             type: 'uuid',
           },
           {
