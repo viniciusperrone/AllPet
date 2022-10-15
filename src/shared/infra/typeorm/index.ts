@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 import { CreateUsers, CreateTokens, CreatePets } from './migrations';
 import User from '@modules/users/infra/typeorm/entities/User';
 import UserToken from '@modules/users/infra/typeorm/entities/UserToken';
-import Pet from '@modules/pets/infra/http/entities/Pet';
+import Pet from '@modules/pets/infra/typeorm/entities/Pet';
 
 dotenv.config();
 

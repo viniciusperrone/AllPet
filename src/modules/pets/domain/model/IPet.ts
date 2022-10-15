@@ -1,9 +1,8 @@
-export interface IUser {
+export interface IPet {
   uuid: string;
   name: string;
-  email: string;
   cellphone: string;
-  password: string;
+  description: string;
   created_at: Date;
   updated_at: Date;
 }

@@ -28,6 +28,7 @@ export class CreatePets1665848037219 implements MigrationInterface {
           {
             name: 'avatar',
             type: 'varchar',
+            isNullable: true,
           },
           {
             name: 'created_at',
