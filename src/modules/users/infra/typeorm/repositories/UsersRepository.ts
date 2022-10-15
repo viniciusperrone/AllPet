@@ -30,7 +30,7 @@ class UsersRepository implements IUsersRepository {
     return user;
   }
 
-  public async create(data: ICreateUser): Promise<IUser | null> {
+  public async create(data: ICreateUser): Promise<IUser> {
     const user = this.databaseRepository.create({ ...data });
 
     await this.databaseRepository.save(user);
