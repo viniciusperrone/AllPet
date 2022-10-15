@@ -9,7 +9,6 @@ router.use('/users', usersRouter);
 router.use('/session', sessionRouter);
 router.use('/pets', petRouter);
 // router.get('/donation');
-// router.get('/pet');
 // router.get('/adoption');
 
 export default router;
