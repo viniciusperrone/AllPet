@@ -23,7 +23,7 @@ dotenv.config();
 export const dataSource = new DataSource({
   url: process.env.DATABASE_URL,
   type: 'postgres',
-  host: process.env.TYPEORM_HOST,
+  host: 'ec2-44-209-24-62.compute-1.amazonaws.com',
   port: 5432,
   username: process.env.TYPEORM_USERNAME,
   password: process.env.TYPEORM_PASSWORD,
