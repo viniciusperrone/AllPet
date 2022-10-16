@@ -6,6 +6,8 @@ import {
   CreateTokens,
   CreatePets,
   CreateDonations,
+  AddUserId,
+  AddPetId,
 } from './migrations';
 import User from '@modules/users/infra/typeorm/entities/User';
 import UserToken from '@modules/users/infra/typeorm/entities/UserToken';
@@ -21,6 +23,13 @@ export const dataSource = new DataSource({
   username: process.env.TYPEORM_USERNAME,
   password: process.env.TYPEORM_PASSWORD,
   database: process.env.TYPEORM_DATABASE,
-  migrations: [CreateUsers, CreateTokens, CreatePets, CreateDonations],
+  migrations: [
+    CreateUsers,
+    CreateTokens,
+    CreatePets,
+    CreateDonations,
+    AddUserId,
+    AddPetId,
+  ],
   entities: [User, UserToken, Pet, Donation],
 });

@@ -1,4 +1,7 @@
+import { IPet } from '@modules/pets/domain/model/IPet';
+import { IUser } from '@modules/users/domain/model/IUser';
+
 export interface ICreateDonation {
-  user_id: string;
-  pet_id: string;
+  user: IUser;
+  pet: IPet;
 }

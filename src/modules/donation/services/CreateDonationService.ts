@@ -1,10 +1,10 @@
 import { injectable as Injectable, inject as Inject } from 'tsyringe';
+import AppError from '@shared/errors/AppError';
 import { IDonationsRepository } from '../domain/repositories/IDonationsRepository';
 import { IUsersRepository } from '@modules/users/domain/repositories/IUsersRepository';
 import { IPetsRepository } from '@modules/pets/domain/repositories/IPetsRepository';
-import { ICreateDonation } from '../domain/model/ICreateDonation';
 import { IDonation } from '../domain/model/IDonation';
-import AppError from '@shared/errors/AppError';
+import { IRequestDonation } from '../domain/model/IRequestDonation';
 
 @Injectable()
 class CreateDonationService {
@@ -20,7 +20,7 @@ class CreateDonationService {
   public async execute({
     user_id,
     pet_id,
-  }: ICreateDonation): Promise<IDonation> {
+  }: IRequestDonation): Promise<IDonation> {
     const user = await this.usersRepository.findById(user_id);
 
     if (!user) {
@@ -35,8 +35,8 @@ class CreateDonationService {
 
     console.log('service');
     const donation = await this.donationsRepository.create({
-      user_id,
-      pet_id,
+      user,
+      pet,
     });
 
     return donation;

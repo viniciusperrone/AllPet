@@ -1,7 +1,10 @@
+import Pet from '@modules/pets/infra/typeorm/entities/Pet';
+import User from '@modules/users/infra/typeorm/entities/User';
 import {
-  Column,
   CreateDateColumn,
   Entity,
+  JoinColumn,
+  OneToOne,
   PrimaryColumn,
   UpdateDateColumn,
 } from 'typeorm';
@@ -11,11 +14,13 @@ class Donation {
   @PrimaryColumn('uuid')
   uuid: string;
 
-  @Column('uuid')
-  user_id: string;
+  @OneToOne(() => User)
+  @JoinColumn({ name: 'user_id' })
+  user: User;
 
-  @Column('uuid')
-  pet_id: string;
+  @OneToOne(() => Pet)
+  @JoinColumn({ name: 'pet_id' })
+  pet: Pet;
 
   @CreateDateColumn()
   created_at: Date;

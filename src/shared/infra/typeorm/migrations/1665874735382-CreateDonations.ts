@@ -14,14 +14,6 @@ export class CreateDonations1665874735382 implements MigrationInterface {
             default: 'uuid_generate_v4()',
           },
           {
-            name: 'user_id',
-            type: 'uuid',
-          },
-          {
-            name: 'pet_id',
-            type: 'uuid',
-          },
-          {
             name: 'created_at',
             type: 'timestamp with time zone',
             default: 'now()',
