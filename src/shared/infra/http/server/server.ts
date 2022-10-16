@@ -10,10 +10,13 @@ import dotenv from 'dotenv';
 import { dataSource } from '../../typeorm';
 import AppError from '../../../errors/AppError';
 
+dotenv.config();
+
 dataSource
   .initialize()
   .then(() => {
     const app = express();
+    const port = process.env.PORT || 3333;
 
     app.use(cors());
     app.use(express.json());
@@ -42,7 +45,7 @@ dataSource
       },
     );
 
-    app.listen(3333, () => {
+    app.listen(port, () => {
       console.log('Server started on port 3333');
     });
   })
