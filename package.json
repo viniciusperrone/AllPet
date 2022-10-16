@@ -7,7 +7,9 @@
   "license": "MIT",
   "scripts": {
     "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules src/shared/infra/http/server/server.ts",
-    "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js"
+    "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
+    "build": "tsc --project tsconfig.json && tscpaths -p tsconfig.json -s ./src -o ./dist",
+    "start": "node build/shared/infra/http/server/server.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -39,6 +41,7 @@
     "eslint-plugin-promise": "^6.0.0",
     "prettier": "^2.7.1",
     "ts-node-dev": "^2.0.0",
-    "typescript": "*"
+    "typescript": "*",
+    "tscpaths": "^0.0.9"
   }
 }

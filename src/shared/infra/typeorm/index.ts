@@ -6,17 +6,22 @@ import {
   CreateTokens,
   CreatePets,
   CreateDonations,
-  AddUserId,
-  AddPetId,
+  AddUserIdToDonation,
+  AddPetIdToDonation,
+  CreateAdoptions,
+  AddUserIdToAdoption,
+  AddPetIdToAdoption,
 } from './migrations';
 import User from '@modules/users/infra/typeorm/entities/User';
 import UserToken from '@modules/users/infra/typeorm/entities/UserToken';
 import Pet from '@modules/pets/infra/typeorm/entities/Pet';
 import Donation from '@modules/donation/infra/typeorm/entities/Donation';
+import Adoption from '@modules/adoption/infra/typeorm/entities/Adoption';
 
 dotenv.config();
 
 export const dataSource = new DataSource({
+  url: process.env.DATABASE_URL,
   type: 'postgres',
   host: process.env.TYPEORM_HOST,
   port: 5432,
@@ -28,8 +33,11 @@ export const dataSource = new DataSource({
     CreateTokens,
     CreatePets,
     CreateDonations,
-    AddUserId,
-    AddPetId,
+    AddUserIdToDonation,
+    AddPetIdToDonation,
+    CreateAdoptions,
+    AddUserIdToAdoption,
+    AddPetIdToAdoption,
   ],
-  entities: [User, UserToken, Pet, Donation],
+  entities: [User, UserToken, Pet, Donation, Adoption],
 });

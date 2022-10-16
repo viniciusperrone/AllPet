@@ -6,6 +6,8 @@ import { IPetsRepository } from '@modules/pets/domain/repositories/IPetsReposito
 import { PetsRepository } from '@modules/pets/infra/typeorm/repositories/PetsRepository';
 import { IDonationsRepository } from '@modules/donation/domain/repositories/IDonationsRepository';
 import { DonationsRepository } from '@modules/donation/infra/typeorm/repositories/DonationsRepository';
+import { IAdoptionsRepository } from '@modules/adoption/domain/repositories/IAdoptionsRepository';
+import { AdoptionsRepository } from '@modules/adoption/infra/typeorm/repositories/AdoptionsRepository';
 
 container.registerSingleton<IUsersRepository>(
   'UsersRepository',
@@ -17,4 +19,9 @@ container.registerSingleton<IPetsRepository>('PetsRepository', PetsRepository);
 container.registerSingleton<IDonationsRepository>(
   'DonationsRepository',
   DonationsRepository,
+);
+
+container.registerSingleton<IAdoptionsRepository>(
+  'AdoptionsRepository',
+  AdoptionsRepository,
 );
