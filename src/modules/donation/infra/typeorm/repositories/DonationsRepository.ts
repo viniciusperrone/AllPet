@@ -24,10 +24,17 @@ class DonationsRepository implements IDonationsRepository {
     return donation;
   }
 
-  public async create(data: ICreateDonation): Promise<IDonation> {
-    const donation = this.databaseRepository.create({ ...data });
-
-    await this.databaseRepository.save(donation);
+  public async create({
+    user_id,
+    pet_id,
+  }: ICreateDonation): Promise<IDonation> {
+    const donation = this.databaseRepository.create({ user_id, pet_id });
+    console.log(donation);
+    try {
+      await this.databaseRepository.save(donation);
+    } catch (error) {
+      console.log(error);
+    }
 
     return donation;
   }

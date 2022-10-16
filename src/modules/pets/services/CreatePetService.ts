@@ -16,16 +16,14 @@ class CreatePetService {
     cellphone,
     description,
   }: ICreatePet): Promise<IPet> {
-    const user = await this.petsRepository.create({
+    const pet = await this.petsRepository.create({
       user_id,
       name,
       cellphone,
       description,
     });
 
-    console.log(user_id);
-
-    return user;
+    return pet;
   }
 }
 

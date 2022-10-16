@@ -6,12 +6,11 @@ import {
   CreateTokens,
   CreatePets,
   CreateDonations,
-  AddUserIdToDonation,
-  AddPetIdToDonation,
 } from './migrations';
 import User from '@modules/users/infra/typeorm/entities/User';
 import UserToken from '@modules/users/infra/typeorm/entities/UserToken';
 import Pet from '@modules/pets/infra/typeorm/entities/Pet';
+import Donation from '@modules/donation/infra/typeorm/entities/Donation';
 
 dotenv.config();
 
@@ -22,13 +21,6 @@ export const dataSource = new DataSource({
   username: process.env.TYPEORM_USERNAME,
   password: process.env.TYPEORM_PASSWORD,
   database: process.env.TYPEORM_DATABASE,
-  migrations: [
-    CreateUsers,
-    CreateTokens,
-    CreatePets,
-    CreateDonations,
-    AddUserIdToDonation,
-    AddPetIdToDonation,
-  ],
-  entities: [User, UserToken, Pet],
+  migrations: [CreateUsers, CreateTokens, CreatePets, CreateDonations],
+  entities: [User, UserToken, Pet, Donation],
 });

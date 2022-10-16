@@ -9,7 +9,7 @@ import AppError from '@shared/errors/AppError';
 @Injectable()
 class CreateDonationService {
   constructor(
-    @Inject('PetsRepository')
+    @Inject('DonationsRepository')
     private donationsRepository: IDonationsRepository,
     @Inject('UsersRepository')
     private usersRepository: IUsersRepository,
@@ -27,12 +27,13 @@ class CreateDonationService {
       throw new AppError('Could not find any user with the given id.');
     }
 
-    const pet = this.petsRepository.findById(pet_id);
+    const pet = await this.petsRepository.findById(pet_id);
 
     if (!pet) {
       throw new AppError('Could not find any pet with the given id.');
     }
 
+    console.log('service');
     const donation = await this.donationsRepository.create({
       user_id,
       pet_id,

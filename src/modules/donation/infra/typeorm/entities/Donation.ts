@@ -2,26 +2,20 @@ import {
   Column,
   CreateDateColumn,
   Entity,
-  JoinColumn,
-  OneToOne,
   PrimaryColumn,
   UpdateDateColumn,
 } from 'typeorm';
-import User from '@modules/users/infra/typeorm/entities/User';
-import Pet from '@modules/pets/infra/typeorm/entities/Pet';
 
-@Entity('pets')
+@Entity('donations')
 class Donation {
   @PrimaryColumn('uuid')
   uuid: string;
 
-  @OneToOne(() => User)
-  @JoinColumn({ name: 'user_id' })
-  user: User;
+  @Column('uuid')
+  user_id: string;
 
-  @OneToOne(() => Pet)
-  @JoinColumn({ name: 'pet_id' })
-  pet: Pet;
+  @Column('uuid')
+  pet_id: string;
 
   @CreateDateColumn()
   created_at: Date;

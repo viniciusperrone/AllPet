@@ -9,7 +9,7 @@ const router = Router();
 router.use('/users', usersRouter);
 router.use('/session', sessionRouter);
 router.use('/pets', petRouter);
-router.use('/donation', donationRouter);
+router.use('/donations', donationRouter);
 // router.get('/adoption');
 
 export default router;
