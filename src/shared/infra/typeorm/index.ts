@@ -21,13 +21,8 @@ import Adoption from '../../../modules/adoption/infra/typeorm/entities/Adoption'
 dotenv.config();
 
 export const dataSource = new DataSource({
-  url: process.env.DATABASE_URL,
   type: 'postgres',
-  host: 'ec2-44-209-24-62.compute-1.amazonaws.com',
-  port: 5432,
-  username: process.env.TYPEORM_USERNAME,
-  password: process.env.TYPEORM_PASSWORD,
-  database: process.env.TYPEORM_DATABASE,
+  url: process.env.DATABASE_URL,
   migrations: [
     CreateUsers,
     CreateTokens,
