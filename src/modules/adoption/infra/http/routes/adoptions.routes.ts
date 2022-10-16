@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { celebrate, Joi, Segments } from 'celebrate';
-import isAuthenticated from '@shared/infra/middlewares/isAuthenticated';
+import isAuthenticated from '../../../../../shared/infra/middlewares/isAuthenticated';
 import { AdoptionController } from '../controllers/AdoptionController';
 
 const adoptionRouter = Router();

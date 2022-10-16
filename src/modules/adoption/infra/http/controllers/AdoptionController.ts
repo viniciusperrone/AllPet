@@ -1,5 +1,5 @@
-import { CreateAdoptionService } from '@modules/adoption/services/CreateAdoptionService';
-import { ListAdoptionsService } from '@modules/adoption/services/ListAdoptionService';
+import { CreateAdoptionService } from '../../../services/CreateAdoptionService';
+import { ListAdoptionsService } from '../../../services/ListAdoptionService';
 import { Request, Response } from 'express';
 import { container } from 'tsyringe';
 

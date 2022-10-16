@@ -1,5 +1,5 @@
-import { CreatePetService } from '@modules/pets/services/CreatePetService';
-import { ListPetService } from '@modules/pets/services/ListPetService';
+import { CreatePetService } from '../../../services/CreatePetService';
+import { ListPetService } from '../../../services/ListPetService';
 import { Request, Response } from 'express';
 import { container } from 'tsyringe';
 

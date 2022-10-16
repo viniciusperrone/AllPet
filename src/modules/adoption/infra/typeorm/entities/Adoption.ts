@@ -1,5 +1,5 @@
-import Pet from '@modules/pets/infra/typeorm/entities/Pet';
-import User from '@modules/users/infra/typeorm/entities/User';
+import Pet from '../../../../pets/infra/typeorm/entities/Pet';
+import User from '../../../../users/infra/typeorm/entities/User';
 import {
   CreateDateColumn,
   Entity,

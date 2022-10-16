@@ -1,14 +1,14 @@
 import 'reflect-metadata';
 import 'express-async-errors';
-import '@shared/container';
-import uploadConfig from '@config/upload';
+import '../../../container';
+import uploadConfig from '../../../../config/upload';
 import express, { NextFunction, Request, Response } from 'express';
 import cors from 'cors';
 import router from '../routes';
 import { errors } from 'celebrate';
 import dotenv from 'dotenv';
-import { dataSource } from '@shared/infra/typeorm';
-import AppError from '@shared/errors/AppError';
+import { dataSource } from '../../typeorm';
+import AppError from '../../../errors/AppError';
 
 dataSource.initialize().then(() => {
   const app = express();

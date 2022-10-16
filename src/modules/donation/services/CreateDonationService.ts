@@ -1,8 +1,8 @@
 import { injectable as Injectable, inject as Inject } from 'tsyringe';
-import AppError from '@shared/errors/AppError';
+import AppError from '../../../shared/errors/AppError';
 import { IDonationsRepository } from '../domain/repositories/IDonationsRepository';
-import { IUsersRepository } from '@modules/users/domain/repositories/IUsersRepository';
-import { IPetsRepository } from '@modules/pets/domain/repositories/IPetsRepository';
+import { IUsersRepository } from '../../users/domain/repositories/IUsersRepository';
+import { IPetsRepository } from '../../pets/domain/repositories/IPetsRepository';
 import { IDonation } from '../domain/model/IDonation';
 import { IRequestDonation } from '../domain/model/IRequestDonation';
 

@@ -1,5 +1,5 @@
-import { IPet } from '@modules/pets/domain/model/IPet';
-import { IUser } from '@modules/users/domain/model/IUser';
+import { IPet } from '../../../pets/domain/model/IPet';
+import { IUser } from '../../../users/domain/model/IUser';
 
 export interface IAdoption {
   uuid: string;

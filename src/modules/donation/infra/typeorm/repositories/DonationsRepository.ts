@@ -1,7 +1,7 @@
-import { ICreateDonation } from '@modules/donation/domain/model/ICreateDonation';
-import { IDonation } from '@modules/donation/domain/model/IDonation';
-import { IDonationsRepository } from '@modules/donation/domain/repositories/IDonationsRepository';
-import { dataSource } from '@shared/infra/typeorm';
+import { ICreateDonation } from '../../../../donation/domain/model/ICreateDonation';
+import { IDonation } from '../../../../donation/domain/model/IDonation';
+import { IDonationsRepository } from '../../../../donation/domain/repositories/IDonationsRepository';
+import { dataSource } from '../../../../../shared/infra/typeorm';
 import { Repository } from 'typeorm';
 import Donation from '../entities/Donation';
 

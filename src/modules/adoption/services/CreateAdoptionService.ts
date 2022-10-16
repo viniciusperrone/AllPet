@@ -1,7 +1,7 @@
 import { injectable as Injectable, inject as Inject } from 'tsyringe';
-import AppError from '@shared/errors/AppError';
-import { IUsersRepository } from '@modules/users/domain/repositories/IUsersRepository';
-import { IPetsRepository } from '@modules/pets/domain/repositories/IPetsRepository';
+import AppError from '../../../shared/errors/AppError';
+import { IUsersRepository } from '../../users/domain/repositories/IUsersRepository';
+import { IPetsRepository } from '../../pets/domain/repositories/IPetsRepository';
 import { IAdoptionsRepository } from '../domain/repositories/IAdoptionsRepository';
 import { IAdoption } from '../domain/model/IAdoption';
 import { IRequestAdoption } from '../domain/model/IRequestAdoption';

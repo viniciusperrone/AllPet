@@ -1,11 +1,11 @@
 import { injectable as Injectable, inject as Inject } from 'tsyringe';
 import path from 'path';
 import fs from 'fs';
-import uploadConfig from '@config/upload';
+import uploadConfig from '../../../config/upload';
 import { IPetsRepository } from '../domain/repositories/IPetsRepository';
 import { IPet } from '../domain/model/IPet';
 import { IUpdatePetAvatar } from '../domain/model/IUpdatePetAvatar';
-import AppError from '@shared/errors/AppError';
+import AppError from '../../../shared/errors/AppError';
 
 @Injectable()
 class UpdatePetAvatarService {

@@ -12,11 +12,11 @@ import {
   AddUserIdToAdoption,
   AddPetIdToAdoption,
 } from './migrations';
-import User from '@modules/users/infra/typeorm/entities/User';
-import UserToken from '@modules/users/infra/typeorm/entities/UserToken';
-import Pet from '@modules/pets/infra/typeorm/entities/Pet';
-import Donation from '@modules/donation/infra/typeorm/entities/Donation';
-import Adoption from '@modules/adoption/infra/typeorm/entities/Adoption';
+import User from '../../../modules/users/infra/typeorm/entities/User';
+import UserToken from '../../../modules/users/infra/typeorm/entities/UserToken';
+import Pet from '../../../modules/pets/infra/typeorm/entities/Pet';
+import Donation from '../../../modules/donation/infra/typeorm/entities/Donation';
+import Adoption from '../../../modules/adoption/infra/typeorm/entities/Adoption';
 
 dotenv.config();
 

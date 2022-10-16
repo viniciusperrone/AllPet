@@ -1,8 +1,8 @@
 import { Repository } from 'typeorm';
-import { dataSource } from '@shared/infra/typeorm';
+import { dataSource } from '../../../../../shared/infra/typeorm';
 
 import UserToken from '../entities/UserToken';
-import { IUserTokensRepository } from '@modules/users/domain/repositories/IUserTokensRepository';
+import { IUserTokensRepository } from '../../../domain/repositories/IUserTokensRepository';
 
 class UserTokensRepository implements IUserTokensRepository {
   private databaseRepository: Repository<UserToken>;

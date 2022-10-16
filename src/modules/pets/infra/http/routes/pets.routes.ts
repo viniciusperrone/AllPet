@@ -1,9 +1,9 @@
 import { Router } from 'express';
 import multer from 'multer';
 import { celebrate, Joi, Segments } from 'celebrate';
-import uploadConfig from '@config/upload';
+import uploadConfig from '../../../../../config/upload';
 import { PetController } from '../controllers/PetController';
-import isAuthenticated from '@shared/infra/middlewares/isAuthenticated';
+import isAuthenticated from '../../../../../shared/infra/middlewares/isAuthenticated';
 import { PetAvatarController } from '../controllers/PetAvatarController';
 
 const petRouter = Router();

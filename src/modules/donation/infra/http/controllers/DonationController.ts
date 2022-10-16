@@ -1,5 +1,5 @@
-import { CreateDonationService } from '@modules/donation/services/CreateDonationService';
-import { ListDonationService } from '@modules/donation/services/ListDonationService';
+import { CreateDonationService } from '../../../../donation/services/CreateDonationService';
+import { ListDonationService } from '../../../../donation/services/ListDonationService';
 import { Request, Response } from 'express';
 import { container } from 'tsyringe';
 

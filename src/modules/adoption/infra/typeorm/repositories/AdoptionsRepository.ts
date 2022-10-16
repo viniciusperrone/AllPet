@@ -1,7 +1,7 @@
-import { IAdoption } from '@modules/adoption/domain/model/IAdoption';
-import { ICreateAdoption } from '@modules/adoption/domain/model/ICreateAdoption';
-import { IAdoptionsRepository } from '@modules/adoption/domain/repositories/IAdoptionsRepository';
-import { dataSource } from '@shared/infra/typeorm';
+import { IAdoption } from '../../../domain/model/IAdoption';
+import { ICreateAdoption } from '../../../../adoption/domain/model/ICreateAdoption';
+import { IAdoptionsRepository } from '../../../../adoption/domain/repositories/IAdoptionsRepository';
+import { dataSource } from '../../../../../shared/infra/typeorm';
 import { Repository } from 'typeorm';
 import Adoption from '../entities/Adoption';
 

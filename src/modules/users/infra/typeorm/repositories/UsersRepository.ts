@@ -1,7 +1,7 @@
-import { ICreateUser } from '@modules/users/domain/model/ICreateUser';
-import { IUser } from '@modules/users/domain/model/IUser';
-import { IUsersRepository } from '@modules/users/domain/repositories/IUsersRepository';
-import { dataSource } from '@shared/infra/typeorm';
+import { ICreateUser } from '../../../domain/model/ICreateUser';
+import { IUser } from '../../../domain/model/IUser';
+import { IUsersRepository } from '../../../domain/repositories/IUsersRepository';
+import { dataSource } from '../../../../../shared/infra/typeorm';
 import { Repository } from 'typeorm';
 import User from '../entities/User';
 

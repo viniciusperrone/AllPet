@@ -1,7 +1,7 @@
-import { ICreatePet } from '@modules/pets/domain/model/ICreatePet';
-import { IPet } from '@modules/pets/domain/model/IPet';
-import { IPetsRepository } from '@modules/pets/domain/repositories/IPetsRepository';
-import { dataSource } from '@shared/infra/typeorm';
+import { ICreatePet } from '../../../domain/model/ICreatePet';
+import { IPet } from '../../../domain/model/IPet';
+import { IPetsRepository } from '../../../domain/repositories/IPetsRepository';
+import { dataSource } from '../../../../../shared/infra/typeorm';
 import { Repository } from 'typeorm';
 import Pet from '../entities/Pet';
 

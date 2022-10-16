@@ -1,8 +1,8 @@
 import { Request, Response } from 'express';
 import { container } from 'tsyringe';
 import { instanceToInstance } from 'class-transformer';
-import AppError from '@shared/errors/AppError';
-import { UpdatePetAvatarService } from '@modules/pets/services/UpdatePetAvatarService';
+import AppError from '../../../../../shared/errors/AppError';
+import { UpdatePetAvatarService } from '../../../services/UpdatePetAvatarService';
 
 class PetAvatarController {
   public async update(request: Request, response: Response): Promise<Response> {
